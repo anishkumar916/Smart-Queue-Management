@@ -1,0 +1,6 @@
+{
+  "name": "Smart Queue Management & Waiting Time Prediction System",
+  "description": "Enterprise-grade smart queue management, token generation, QR scanning, real-time live queue tracking, and statistical waiting-time prediction for organizations.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Universal dark mode form controls styling:
+   Ensures typing font is crisp, clean white (#ffffff) with high contrast,
+   field background is dark slate, and placeholders are clear */
+.dark input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="file"]),
+.dark textarea,
+.dark select {
+  color: #ffffff !important;
+  background-color: #1e293b;
+}
+
+.dark input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="button"]):not([type="file"]):focus,
+.dark textarea:focus,
+.dark select:focus {
+  color: #ffffff !important;
+}
+
+.dark input::placeholder,
+.dark textarea::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* Ensure select dropdown options in dark mode render dark background and white text */
+.dark select option {
+  background-color: #0f172a;
+  color: #ffffff;
+}
+
+/* Ensure typing caret is clearly white in dark mode */
+.dark input,
+.dark textarea {
+  caret-color: #ffffff !important;
+}
+
+/* Prevent browser autofill from breaking dark mode typing font color */
+.dark input:-webkit-autofill,
+.dark input:-webkit-autofill:hover, 
+.dark input:-webkit-autofill:focus, 
+.dark textarea:-webkit-autofill,
+.dark textarea:-webkit-autofill:hover,
+.dark textarea:-webkit-autofill:focus,
+.dark select:-webkit-autofill,
+.dark select:-webkit-autofill:hover,
+.dark select:-webkit-autofill:focus {
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-box-shadow: 0 0 0px 1000px #1e293b inset !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
